@@ -1,18 +1,62 @@
 html, body {
-  margin: 0;
-  padding: 0.5rem;
+  font-size: 10px;
 }
 
 body {
-  font-size: 1rem;
-  background: #fff;
+  overflow: hidden;
 }
 
-h1 {
-  margin: 0 0 1rem 0;
+div, button {
+  box-sizing: border-box;
 }
 
-p {
-  font-size: inherit;
+#toolbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 2.5rem;
+  background-color: rgb(30, 102, 175);
 }
 
+#goback-button,
+#goforward-button {
+  width: 3rem;
+}
+
+#url-button {
+  width: 4rem;
+}
+
+#url-bar {
+  width: calc(100% - 12rem);
+}
+
+#url-input {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#frame-container {
+  height: calc(100vh - 2.5rem);
+}
+
+#frame-container.empty #empty-frame {
+  display: block;
+}
+
+#frame-container.empty > iframe {
+  display: none;
+}
+
+#frame-container > iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#empty-frame {
+  font-size: 2rem;
+  font-weight: bold;
+  height: 100%;
+  display: none;
+}

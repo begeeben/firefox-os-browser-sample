@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "name": "myBrowser",
-  "description": "A template with the bare minimum structure",
+  "name": "mybrowser",
+  "description": "Demonstrates how to use permissions to load remote content",
   "launch_path": "/index.html",
   "icons": {
     "16": "/img/icons/icon16x16.png",
@@ -14,7 +14,9 @@
     "url": "http://example.com"
   },
   "type": "privileged",
-  "permissions": {},
+  "permissions": {
+    "browser": {}
+  },
   "installs_allowed_from": [
     "*"
   ],

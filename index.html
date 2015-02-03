@@ -14,6 +14,7 @@
           https://developer.mozilla.org/Mozilla/Mobile/Viewport_meta_tag
         -->
         <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/app.css">
 
         <!--
@@ -28,6 +29,7 @@
         execute the deferred files.
         Read about defer: https://developer.mozilla.org/Web/HTML/Element/script#attr-defer
         -->
+        <script type="text/javascript" src="js/tab.js" defer></script>
         <script type="text/javascript" src="js/app.js" defer></script>
 
         <!--
@@ -39,10 +41,21 @@
         <script type="text/javascript" src="js/libs/l10n.js" defer></script>
     </head>
     <body>
-        <section>
-            <h1 data-l10n-id="app_title">Privileged empty app</h1>
-            <p data-l10n-id="app_description">This app is empty. Fill it with your own stuff!</p>
-            <p id="message"></p>
-        </section>
+        <!-- browser toolbar -->
+        <div id="toolbar">
+            <button id="goback-button" type="button" disabled>&lt;</button>
+            <button id="goforward-button" type="button" disabled>&gt;</button>
+            <!-- url bar displays page url or page title -->
+            <form id="url-bar">
+                <input id="url-input" type="text"></input>
+            </form>
+            <button id="url-button" form="url-bar">GO</button>
+        </div>
+        <!-- the container for the browser frame -->
+        <div id="frame-container" class="empty">
+            <div id="empty-frame">
+                <h1>Hello myBrowser!</h1>
+            </div>
+        </div>
     </body>
 </html>
